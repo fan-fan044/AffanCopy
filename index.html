@@ -1,57 +1,139 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Affan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
-        .header { background-color: #007BFF; color: white; text-align: center; padding: 30px 10px; }
-        .profile-pic { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid white; margin-top: -75px; }
-        .container { padding: 20px; max-width: 800px; margin: auto; background: white; margin-top: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h2 { color: #007BFF; }
-        .skills, .experience, .contact { margin-bottom: 30px; }
-        .contact a { color: #007BFF; text-decoration: none; }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .header {
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            transition: background 0.5s;
+        }
+        .header:hover {
+            background: #0056b3;
+        }
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-top: -80px;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s;
+        }
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .container {
+            background: white;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+        .skills, .contact {
+            margin: 40px 0;
+        }
+        .skills h2, .contact h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #007BFF;
+        }
+        .contact a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .contact a:hover {
+            color: #0056b3;
+        }
+        button {
+            background-color: #25D366;
+            border: none;
+            color: white;
+            padding: 14px 30px;
+            margin-top: 20px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #1ebe57;
+            transform: scale(1.05);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        ul li::before {
+            content: "✔ ";
+            color: #007BFF;
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
-
-<div class="header">
-    <img src="foto-affan.jpg" alt="Foto Affan" class="profile-pic">
-    <h1>Affan</h1>
-    <p>Retail Specialist | Copywriter | Microsoft Office Expert</p>
-</div>
-
-<div class="container">
-    <div class="about">
-        <h2>Tentang Saya</h2>
-        <p>Saya adalah seorang profesional di bidang ritel dengan pengalaman dalam manajemen stok dan pelayanan pelanggan. Selain itu, saya memiliki keahlian dalam copywriting dan penguasaan Microsoft Office untuk menunjang pekerjaan administrasi dan kreatif.</p>
+    <div class="header">
+        <h1>Affan</h1>
+        <p>Ritel | Copywriting | Microsoft Office</p>
     </div>
 
-    <div class="skills">
-        <h2>Keahlian</h2>
-        <ul>
-            <li>Manajemen Ritel dan Stok Barang</li>
-            <li>Pelayanan Pelanggan</li>
-            <li>Copywriting</li>
-            <li>Microsoft Office (Word, Excel, PowerPoint)</li>
-        </ul>
-    </div>
+    <div class="container">
+        <img src="Affan.jpg" alt="Foto Affan" class="profile-pic">
 
-    <div class="experience">
-        <h2>Pengalaman</h2>
-        <ul>
-            <li>Bekerja di Toko Sembako dan Ritel selama 5 tahun</li>
-            <li>Barbershop - pelayanan pelanggan dan promosi acara</li>
-        </ul>
-    </div>
+        <div class="skills">
+            <h2>Keahlian</h2>
+            <ul>
+                <li>Ritel</li>
+                <li>Copywriting</li>
+                <li>Microsoft Office</li>
+            </ul>
+        </div>
 
-    <div class="contact">
-        <h2>Kontak</h2>
-        <p>WhatsApp: <a href="https://wa.me/6282159281238">+62 821 5928 1238</a></p>
+        <div class="contact">
+            <h2>Kontak</h2>
+            <p>Email: <a href="mailto:muhammadaffan8888@gmail.com">muhammadaffan8888@gmail.com</a></p>
+            <a href="https://wa.me/6282159281238" target="_blank">
+                <button><i class="fab fa-whatsapp"></i> Hubungi via WhatsApp</button>
+            </a>
+        </div>
     </div>
-</div>
-
 </body>
 </html>
